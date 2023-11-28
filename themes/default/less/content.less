@@ -1,0 +1,348 @@
+
+/*----------------------------
+
+  CSS for confirm.html
+
+----------------------------*/
+body {
+    border-top: @primaryColor 5px solid;
+    padding-top: 15px;
+    @media @mobile {
+        padding-left: 0;
+        padding-right: 0;
+        .main-container {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }  
+}
+
+// Global changes
+table {
+    width: 100%;
+}
+
+// Lists
+ul li.collapsed,
+ul li.expanded,
+ul li.leaf {
+    list-style: none;
+    list-style-image: none;
+}
+
+.media {
+    img {
+        margin-right: 1em;
+    }
+}
+
+.borderTop (@borderColor: @primaryColor) {
+    border-top: solid 5px @borderColor;
+}
+
+.capitalize {
+    text-transform: uppercase;
+}
+
+// Generic Page Styles.
+.content-area {
+    h1.page-header {
+        border: none;
+    }
+    .borderTop (@rsapale);
+    padding-top: 16px;
+    .field-name-field-preamble {
+        font-size: 1.14em;
+        line-height: 1.41em;
+        margin-bottom: 10px;
+    }
+    .nav {
+        margin-top: 100px;
+        li {
+            line-height: 1.71em;
+            font-family: @headingsFontFamily;
+            font-size: 1.14em;
+            text-transform: uppercase;
+            a:hover, 
+            a.active {
+                color: @linkPurpleHover;
+            }
+        }
+    }
+}
+.divider-blue {
+    border-top: solid 4px @primaryAccentColor;
+    .assistance {
+        margin-top: 44px;
+        text-align: center;
+    }
+}
+
+
+
+//added
+
+.airmilebox {
+    background: @grayLighter url(../images/logo-air-miles.png) no-repeat 25px center;
+    border: 1px solid @grayLight;
+    border-radius: 3px;
+    margin: 20px 0 10px;
+    padding: 35px 15px 20px 165px;
+    @media @mobile {
+        background: @grayLighter url(../images/logo-air-miles.png) no-repeat 25px 35px;
+    }
+}
+
+
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+/*----------------------------
+
+  CSS for payment.html
+
+----------------------------*/
+
+.payment {
+    fieldset {
+        label {
+            padding: 7px 0;
+            text-align: right;
+            @media @mobile {
+                text-align: left;
+            }
+        }
+        input[type="text"] {
+            &.width {
+                width: @btnInputWidth;
+                @media @mobile {
+                   height: 35px;   
+                }
+            }
+        }
+        .help-link {
+            @media @mobile {
+               float: left;
+               margin-bottom: 16px;
+            }
+        }
+        .next {
+            margin-top: 22px; 
+            img {
+                margin-top: 18px;
+                @media @mobile {
+                    margin: 14px auto;
+                    width: 303px;
+                }
+            }
+            button {
+                float: right;
+                width: 240px;
+                @media @mobile {
+                    float: none;
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------
+
+  CSS for review-payment-overdue.html
+
+----------------------------*/
+
+.paymentReview {
+    section {
+        .statement {
+            p {
+                line-height: @baseLineHeight;
+                margin: 25px 0;
+            }
+        }
+        .box {
+            margin-top: 24px;
+            padding: 14px;
+            h4 {
+                color: @primaryColor;
+                font-size: @baseFontSize;
+            }
+        }
+        .first {
+            padding-left: 0;
+        }
+        .bck {
+            background: @grayLighter;
+            border: 2px solid @grayLight;
+        }
+        .total {
+            margin: 28px 0;
+            p {
+                font-size: 18px;
+                text-align: right;
+                @media @mobile {
+                    .center;
+                }
+            }
+        }
+    }
+
+    .no_payment{
+        padding-bottom:3em;
+    }
+
+    .help-link{
+        float:none !important;
+        display:inline !important;
+        margin-right:0 !important;
+    }
+
+    .payment_help .span3{
+        width:60%;
+    }
+
+    .cancel {
+        margin-top: 24px;
+        button {
+            background: @btnInfoBackground;
+            border-color: @btnInfoBorder;
+            color: @white;
+            float: right;
+            font-family: @headingsFontFamily;
+            @media @mobile {
+                float: none;
+            }
+        }
+    }
+    .position {
+        padding: 0;
+        position: relative;
+        @media @mobile {
+            margin-bottom: 42px;
+        }
+        .payment {
+            button {
+                float: right;
+                margin-top: 0;
+                width: 240px;
+                @media @mobile {
+                    float: none;
+                }
+            }
+            img {
+                margin-top: 7px;
+                @media @mobile {
+                    bottom: -35%;
+                    left: 0;
+                    margin: auto;
+                    position: absolute;
+                    right: 0;
+                    .center;
+                    width: 303px;
+                }
+            }
+        }
+    }
+}
+
+
+.confirmation{
+    margin-bottom:1em;
+
+    dl{
+        width:90%;
+    }
+    dt {
+        clear: left;
+        padding: 0.5em .5em 0 0;
+        text-align:left;
+        width:50%;
+        text-transform:uppercase;
+        display:block;
+        @media @notmobile{
+            float: left;
+        }
+        @media @tablet{
+            float:none;
+            width:100%;
+        }
+    }
+    dd {
+        padding: 0.5em .5em 0 0;
+        @media @mobile{
+            margin-left:0px;
+        }
+
+        @media @tablet{
+            margin-left:0px;
+        }
+        text-align:left;
+    }
+
+    em{
+        font-style : normal;
+        font-size: @fontSizeLarge;
+        color:@headingsColor;
+    }
+    section:after{
+        clear:both;
+    }
+
+    h2{
+        margin-top:1.8em;
+    }
+
+    .merch_details{
+        margin-bottom: 3em;
+    }
+
+    div.row section{
+        margin-bottom:3em;
+    }
+
+    @media @mobile{
+        .span4 {
+            margin-bottom:3em;
+        }
+    }
+
+}
+
+.confirmationFail {
+    .top {
+        font-weight: bold;
+        .no-margin-bottom;
+    }
+    .ways {
+        margin: 18px 0;
+        section {
+            padding-left: 125px;
+            p {
+                width: 90%;
+                &.first {
+                    font-weight: bold;
+                    .no-margin-bottom;
+                }
+            }
+        }
+        &.cheque {
+            background: url(../images/cheque.png) no-repeat 28px center;
+            @media @mobile {
+                background: url(../images/cheque.png) no-repeat 28px 10px;
+            }
+        }
+        &.online {
+            background: url(../images/online.png) no-repeat 25px center;
+            @media @mobile {
+                background: url(../images/online.png) no-repeat 25px 10px;
+            }
+        }
+        &.phone {
+            background: url(../images/phone.png) no-repeat 28px center;
+            @media @mobile {
+                background: url(../images/phone.png) no-repeat 28px 10px;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,86 @@
+
+.footerContent {
+	margin-bottom: 55px;
+	line-height: @fontSizeLarge * 1.25;
+	.first {
+		border: 2px solid #e8e6dc;
+		margin: 32px 0 42px; 
+		padding: 14px 28px;
+	}
+}
+
+#page-footer {
+	background-color: @grayDarker;
+	color: lighten(@gray, 20%);
+	text-align: center;
+	width: 100%;
+	padding: 40px 0 60px 0;
+	font-size: @fontSizeSmall * 1;
+  	.logo-footer {
+    	margin-bottom: 20px;
+  	}
+  	.menu-footer {
+  		li {
+			a {
+				color: @white;
+			}
+		}
+  	}
+  	.social {
+  		ul {
+  			list-style: none;
+  			margin: 28px 0 55px; 
+  			li {
+  				display: inline-block;
+  				a {
+  					margin-right: 1em;
+  				}
+  				.icon-twitter, 
+  				.icon-linkedin-sign{
+					color: @white;
+					font-size: 2em;
+				}
+  			}
+  		}
+  	}
+  	a,
+	a:hover,
+	a:focus,
+	a:visited {
+	    text-decoration: underline;
+	    color: @white;
+	}
+	@media @notmobile{
+		.menu-footer li {
+			display: inline;
+		}
+		.menu-footer li a {
+			display: inline;
+			text-decoration:bold;
+
+		}
+		.menu-footer li:before {
+			color: @white;
+			content: "|";
+			margin-right: 10px;
+			padding-left: 10px;
+		}
+		.menu-footer li.first:before {
+			display: none;
+	    }
+	}
+    @media @mobile {
+		.menu-footer li{
+			disply: block;
+			list-style-type: none;
+			line-height: 2em;
+		}
+		.menu-footer li a{
+			disply: block;
+		}
+		.menu-footer li:before {
+			display: none;
+		}
+    }
+
+}

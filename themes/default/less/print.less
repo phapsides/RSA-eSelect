@@ -1,0 +1,98 @@
+@media print {
+  .menu,
+  #mobile-menu,
+  .social,
+  .menu-footer{
+    display: none;
+  }
+
+	a[href]:after {
+	    content:none;
+	}
+  body{
+  	border: none;
+    font-size:12px;
+  }
+
+  h1{
+    margin-bottom:0 !important;
+  }
+
+  h2{
+    margin-top:0 !important;
+  }
+
+  .row section{
+    margin-bottom:0 !important;
+  }
+
+  .ways {
+        section {
+            p {
+                width: 90%;
+                &.first {
+                    font-weight: bold;
+                    .no-margin-bottom;
+                }
+            }
+        }
+        &.cheque  {
+          display: list-item;
+          list-style-image: url(../images/cheque.png);
+          list-style-position: inside;
+        }
+        &.online  {
+            display: list-item;
+            list-style-image: url(../images/online.png);
+            list-style-position: inside;
+
+        }
+        &.phone  {
+            display: list-item;
+            list-style-image: url(../images/phone.png);
+            list-style-position: inside;
+
+        }
+
+        .span10{
+          margin-top:-45px;
+          margin-left:-20px;
+        }
+    }
+
+  .airmilebox{
+    display: list-item;
+    list-style-image: url(../images/logo-air-miles.png);
+    list-style-position: inside;
+    margin-left: -20%;
+  }
+
+  .confirmation{
+    margin-bottom:1em;
+
+    dl{
+        width:90%;
+    }
+    dt {
+        clear: left;
+        padding: 0.5em .5em 0 0;
+        text-align:left;
+        width:50%;
+        text-transform:uppercase;
+        display:block;
+        float: left;
+    }
+    dd {
+        padding: 0.5em .5em 0 0;
+        text-align:left;
+    }
+
+    h2{
+      margint-top:0.5em !important;
+    }
+  }
+
+
+
+
+}

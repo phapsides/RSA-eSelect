@@ -1,0 +1,103 @@
+.btn-input-width {
+    width: @btnInputWidth;
+}
+
+.btn-group-primary {
+    @media @mobile {
+        .center;
+    }
+    @media print {
+        display: none;
+    }
+}
+
+.btn-group-secondary {
+    @media @mobile {
+        .center;
+    }
+    @media print {
+        display: none;
+    }
+    .btn-info {
+        margin-bottom: 20px;
+    }
+}
+
+.btn {
+    background-image: none;
+    width: auto;
+    font-family: @headingsFontFamily;
+    text-shadow: none;
+    @media print {
+        display: none;
+    }
+    &:hover {
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
+}
+
+.btn-primary {
+    text-shadow: none;
+    width: 256px;
+    border-color: @btnPrimaryBorder;
+}
+
+// Buttons
+.btn-xlarge {
+    padding: 16px 34px;
+    font-size: @baseFontSize + 4px;
+    line-height: normal;
+    .border-radius(5px);
+    margin-top: 14px;
+}
+
+.btn-large{
+    font-size: @baseFontSize;
+}
+
+.btn-xlarge [class^="icon-"] {
+    margin-top: 2px;
+}
+
+.btn-info {
+    padding: 14px 24px;
+    margin-right: 12px;
+    border-color: @btnInfoBorder;
+}
+
+
+
+.buttons,
+.print_buttons {
+    .control-group {
+        margin: 14px 0;
+        text-align: right;
+        @media @mobile {
+            .center;
+        }
+        .btn-large {
+            background: #6cb1b7;
+            border-color: #569099;
+            color: @white;        
+            font-family: @headingsFontFamily;
+        }
+    }
+}
+
+.print_buttons {
+    .nomobile {
+        display: block;
+        @media @mobile {
+            display: none;
+        }
+    }
+    .mobile {
+        display: none;
+        @media @mobile {
+            display: block;
+        }
+    }
+}

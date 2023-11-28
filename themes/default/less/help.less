@@ -1,0 +1,70 @@
+.help-link {
+    display: block;
+    float: right;
+    margin-right: 15%;
+    margin-top: 8px;
+    outline: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    @media @mobile {
+       float: left;
+       margin-bottom: 16px;
+    }
+    .under {
+        text-decoration: underline;
+    }
+    &:active,
+    &:visited,
+    &:focus,
+    &:hover {
+       outline: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.help-group {
+    display: none;
+    position: relative;
+    .arrow-wrapper {
+        float: right;
+        margin-right: 15%;
+        position: absolute;
+        right: 10px;
+        @media @mobile {
+            float: left;
+            left: 60px;
+        }
+        .arrow-up {
+            border-bottom: 10px solid #e8e6dc;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            height: 0;
+            left: -120px;
+            position: absolute;
+            top: -10px;
+            width: 0;
+        }
+    }
+    .help {
+        position: relative;
+        min-height: 20px;
+        padding: 19px 0;
+        margin-bottom: 20px;
+        background-color: @helpBackground;
+        p {
+            padding: 8px 16px 0;
+        }
+        blockquote {
+            border-color: #ddd;
+            border-color: rgba(0,0,0,.15);
+        }
+        @media @mobile {
+            padding: 19px;
+        }
+    }
+}
+
+

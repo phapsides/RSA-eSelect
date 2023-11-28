@@ -1,0 +1,231 @@
+// Border Radius
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+// Box sizing.
+.box-sizing(@boxmodel) {
+  -webkit-box-sizing: @boxmodel;
+     -moz-box-sizing: @boxmodel;
+          box-sizing: @boxmodel;
+}
+
+label {
+  font-weight: 500;
+  font-size: 1em;
+  color: @labelColorFont;
+}
+
+/**************  Layouts  *********************/
+.form-horizontal {
+    .control-group {
+        padding: 18px 0;
+        .no-margin-bottom;
+        @media @mobile {
+            padding: 18px 10px;
+        }
+        .control-label {
+            float: left;
+            text-align: right;
+            width: 100%;
+            @media @mobile {
+                float: none;
+                text-align: left;
+            }
+            &.text-left {
+                text-align: left;
+                width: auto;
+            }
+        }
+        &.error {
+            margin-bottom: 8px;
+        }
+        .medical-question {
+            margin-bottom: 12px;
+        }
+        .medical-question-applicant {
+            margin-bottom: 4px;
+        }
+    }
+    .control-text {
+        label {
+            float: left;
+            margin-top: 0;
+            padding: 6px 0;
+            text-align: right;
+            width: 100%;
+            @media @mobile {
+                float: none;
+                padding: 10px;
+                text-align: left;
+            }
+        }
+        .confirmDetail {
+            display: block;
+            color: @gray;
+            padding: 6px; // Match label padding
+            @media @mobile {
+                padding: 0 10px;
+            }
+        }
+    }
+    .well
+        .control-group {
+            padding-bottom: 0;
+        }
+    }
+    fieldset {
+        padding: 7px 0;
+        width: 100%;
+        &.no-divider {
+            border-bottom: none;
+        }
+    }
+    // .details-review added to form for CSS targetting
+    .content-area .details-review{
+        .control-group{
+            padding: 6px 10px;
+        }
+        // Right column of details review
+        .confirmDetail{
+            color: @gray;
+            display: block;
+            padding-top: 6px; // Match label padding
+            @media @mobile {
+            padding-top: 0;
+        }
+    }
+}
+
+/**************  Inputs  **********************/
+input, 
+select, 
+textarea, 
+button, 
+keygen, 
+isindex, 
+legend, 
+a {
+    font-size: 1em;
+}
+
+input, 
+textarea, 
+select, 
+.uneditable-input {
+    max-width: 100%;
+}
+
+select {
+    width: auto;
+}
+
+select, textarea, 
+input[type="text"], 
+input[type="password"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="number"], 
+input[type="email"], 
+input[type="url"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="color"], 
+.uneditable-input, 
+.resizable-textarea textarea {
+    border-radius: 0 0 0 0;
+    color: @inputColorFont;
+    padding: 8px 6px;
+}
+
+textarea {
+    background-color: @white;
+}
+
+// Everything else
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    // Focus state
+    &:focus {
+        border-color: @teal;
+        .box-shadow(~"inset 0 1px 1px @teal, 0 0 8px rgba(82,168,236,.6)");
+    }
+}
+
+select[size="1"] {
+    height: @inputHeight;
+    line-height: @baseLineHeight;
+    padding: 0;
+}
+
+input.datepicker-hidden {
+    display: none;
+}
+
+// Placeholder text gets special styles because when browsers invalidate entire lines if it doesn't understand a selector
+input,
+textarea {
+    .placeholder();
+}
+
+.textarea {
+    background-color: @white;
+    border: solid 1px lighten(@gray, 40%);
+    height: 190px;
+    overflow: auto;
+    padding: 8px;
+}
+
+input.datepicker-hidden {
+    display: none;
+}
+
+.form-type-checkbox input, .form-type-radio input {
+    float: left;
+}
+
+.form-actions {
+    clear: both;
+}
+.resizable-textarea textarea {
+    .border-radius(~"4px 4px 0 0");
+}
+
+table.control {
+    margin-top: 5px;
+}
+
+table.radio-float {
+    tr {
+        float: left;
+    }
+    label {
+        margin-top: 5px;
+        margin-right: 24px;
+    }
+}
+
+// hide applicatnt 2 address text by default
+#travel-details\:province2 {
+    display: none;
+}

@@ -1,0 +1,45 @@
+/*****************  Bootstrap Errors  *****************/
+input.error {
+  color: @errorText;
+  border-color: @errorBorder;
+}
+
+.control-group.error .checkbox, 
+.control-group.error .radio {
+  border: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-collapse: none;
+}
+
+.control-group.error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  .control-label {
+    color: @labelColorFont;
+  }
+  // Placeholder text gets special styles because when browsers invalidate entire lines if it doesn't understand a selector
+  input,
+  textarea {
+    .placeholder(@placeholderTextError);
+  }
+}
+
+/*****************  JSF Error Messages  ***************/
+.rf-msg {
+  display: none;
+}
+
+*.rf-msg-err, *.rf-msgs-err {
+  padding-left: 0;
+  background: none;
+  color: @errorText;
+  font-weight: 600;
+  display: block;
+}
+
+table input[type="radio"] {
+  float: left;
+  margin-right: 12px;
+  background-color: #e5e5e5;
+}

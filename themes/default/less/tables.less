@@ -1,0 +1,110 @@
+/*----------------------------
+
+  CSS for review-payment-overdue.html
+
+----------------------------*/
+.paymentReview {
+    section {
+        .tbl {
+            margin-top: 28px;
+            h3{
+                font-family:Arial, "sans serif";
+            }
+            .table {
+                margin-bottom: 12px;
+                tr {
+                    th {
+                        border-top: none;
+                        color: @primaryColor;
+                        font-family: @headingsFontFamily;
+                        font-weight: normal;
+                        padding: 8px 0;
+                        background-color: @white;
+                        @media @mobile{
+                            display: none;
+                        }
+                    }
+                    td {
+                        padding: 21px 0;
+                        @media @mobile {
+                            border: none;
+                            display: block;
+                            padding: 8px 0 8px 16px;
+                        }
+                    }
+                    td:first-child {
+                        padding-left: 16px;
+                    }
+                    .last {
+                        text-align: right;
+                        padding: 8px 0 8px 8px;
+                        @media @mobile {
+                            padding-bottom: 16px;
+                            padding-left: 16px;
+                            text-align: left;
+                        }
+                        button {
+                            background: @btnInfoBackground;
+                            border-color: @btnInfoBorder;
+                            color: @white;
+                            font-family: @headingsFontFamily;
+                            width: 175px;
+                            .showPrice {
+                                display: block;
+                            }
+                            .hidePrice {
+                                display: none;
+                            }
+                        }
+                    }
+                    .stack_title{
+                        display: none;
+                        color: @primaryColor;
+                        @media @mobile {
+                            display: block;
+                        }  
+                    }
+                }
+                .select_to_pay {
+
+                }
+                .selected {
+                    background-color: @grayLighter;   
+                    .last {
+                        button {
+                            .showPrice {
+                                display: none;
+                            }
+                            .hidePrice {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                .overdue {
+                    td {
+                        color: #e70000;
+                    }
+                    .stack_title{
+                        color: @primaryColor;
+                    }
+                }
+                .disabled {
+                    td {
+                        color: #676767;
+                    }
+                    .stack_title{
+                        color: @primaryColor;
+                    }
+                    .last {
+                        button {
+                            background: #c6c6c6;
+                            border-color: #c6c6c6;
+                            color: #e3e3e3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

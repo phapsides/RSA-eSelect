@@ -1,0 +1,32 @@
+#mobile-menu {
+  display: none;
+  visibility: hidden;
+}
+
+#mobile-menu {
+  .bar {
+    background-color: @purple;
+    width: 28px;
+    height: 5px;
+    margin-bottom: 4px;
+    display: block;
+  }
+}
+
+@media @mobile {
+  #mobile-menu {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    margin: 50px 0 0;
+    width: 27px;
+    visibility: visible;
+  }
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background: none;
+  color: @linkColorHover;
+  text-decoration: underline;
+}
